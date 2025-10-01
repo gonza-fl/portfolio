@@ -39,14 +39,14 @@ const Contact = () => {
     {
       icon: Linkedin,
       title: 'LinkedIn',
-      value: '/gonza-flamenci',
+      value: 'linkedin.com/in/gonza-flamenci',
       gradient: 'from-purple-400 to-pink-500',
       link: 'https://linkedin.com/in/gonza-flamenci',
     },
     {
       icon: Github,
       title: 'GitHub',
-      value: '/gonza-fl',
+      value: 'github.com/gonza-fl',
       gradient: 'from-green-400 to-cyan-500',
       link: 'https://github.com/gonza-fl',
     },

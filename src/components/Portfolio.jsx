@@ -29,7 +29,7 @@ const Portfolio = () => {
     {
       title: 'Backend',
       color: 'from-purple-400 to-pink-500',
-      skills: ['Nest.js', 'Express', 'PHP', 'Laravel', 'Docker'],
+      skills: ['Nest.js', 'Express', 'PHP con Laravel', 'Docker'],
     },
     {
       title: 'Mobile & Database',
@@ -68,7 +68,7 @@ const Portfolio = () => {
         title: 'Sistema de Gestión Empresarial',
         description:
           'ERP completo para PYMEs. Gestión de inventario, facturación, RRHH y reportes financieros con dashboard interactivo.',
-        tech: ['Laravel', 'MySQL', 'React'],
+        tech: ['PHP con Laravel', 'MySQL', 'React'],
         type: 'web',
         gradient: 'from-green-400 to-cyan-500',
         features: ['Dashboard analytics', 'Facturación automática', 'Gestión de inventario', 'Reportes PDF'],
