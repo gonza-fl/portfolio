@@ -99,3 +99,41 @@ body {
 .glow:hover {
   box-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
 }
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Custom select styling */
+select {
+  background-image: none;
+}
+
+select option {
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 8px 12px;
+}
+
+select optgroup {
+  background-color: #0f172a;
+  color: #06b6d4;
+  font-weight: 600;
+  padding: 4px 8px;
+}
+
+/* Custom select focus states */
+select:focus {
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+/* Custom select hover states */
+select:hover {
+  background-color: rgba(51, 65, 85, 0.7);
+}
