@@ -74,8 +74,8 @@ const About = () => {
           >
             <div className='relative'>
               <img
-                src='https://horizons-cdn.hostinger.com/cdf6afdc-464b-4ae9-b908-071ff0cca4f3/generated-image-september-29-2025---2_33am-ZxK15.png'
-                alt='Perfil profesional del desarrollador'
+                src='/public/images/gz.png'
+                alt='Perfil profesional del desarrollador Gonzalo Flamenci'
                 className='w-full max-w-md mx-auto rounded-2xl shadow-2xl'
               />
               <div className='absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-purple-500/10 rounded-2xl'></div>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import HeroImage from './HeroImage';
 const Hero = () => {
   const { toast } = useToast();
   const handleSocialClick = (platform) => {
@@ -201,12 +202,7 @@ const Hero = () => {
               }}
               className='relative'
             >
-              <img
-                src='https://horizons-cdn.hostinger.com/cdf6afdc-464b-4ae9-b908-071ff0cca4f3/generated-image-september-29-2025---2_19am-1-uiJuL.png'
-                alt='Desarrollador profesional trabajando'
-                className='w-full max-w-lg mx-auto rounded-2xl shadow-2xl'
-              />
-              <div className='absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-2xl'></div>
+              <HeroImage />
             </motion.div>
           </div>
 
