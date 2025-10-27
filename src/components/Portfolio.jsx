@@ -24,18 +24,17 @@ const Portfolio = () => {
     {
       title: 'Frontend',
       color: 'from-cyan-400 to-blue-500',
-      skills: ['React', 'Next.js', 'TailwindCSS'],
+      skills: ['React', 'Next.js', 'TailwindCSS', 'React Native (iOS y Android)'],
     },
     {
       title: 'Backend',
       color: 'from-purple-400 to-pink-500',
-      skills: ['Nest.js', 'Express', 'PHP con Laravel', 'Docker'],
+      skills: ['Node.js', 'Express', 'PHP con Laravel', 'Django'],
     },
     {
-      title: 'Mobile & Database',
+      title: 'Database',
       color: 'from-green-400 to-cyan-500',
       skills: [
-        'React Native',
         'PostgreSQL',
         'MySQL',
         'MongoDB',
@@ -47,22 +46,34 @@ const Portfolio = () => {
   const allProjects = useMemo(
     () => [
       {
-        title: 'Marketplace de Servicios',
+        title: 'COFARAL es una droguería integral',
         description:
-          'Plataforma tipo Uber para servicios locales. Chat en tiempo real, geolocalización, pagos integrados y sistema de calificaciones.',
+          'Gestion de productos, proveedores, ventas, inventario, clientes, sistema de facturación, reportes, migración base de datos, vademecum, y sistema para farmacias.',
+        tech: ['React', 'PostgreSQL', 'TailwindCSS'],
+        type: 'web y api',
+        gradient: 'from-cyan-400 to-blue-500',
+        features: [
+          'Gestion de productos',
+          'Gestion de proveedores',
+          'Gestion de ventas',
+          'Gestion de inventario',
+          'Gestion de clientes',
+        ],
+      },
+      {
+        title: 'Sistema para gimnasio',
+        description:
+          'Sistema para gimnasio: Gestion de clientes, membresías, control de asistencia, rutinas de entrenamiento, etc.',
         tech: ['Next.js', 'Supabase', 'TailwindCSS'],
         type: 'web',
         gradient: 'from-cyan-400 to-blue-500',
-        features: ['Chat en tiempo real', 'Geolocalización', 'Pagos Stripe', 'Sistema de reviews'],
-      },
-      {
-        title: 'App de Delivery de Comida',
-        description:
-          'App móvil completa para delivery. Tracking en tiempo real, notificaciones push, integración con restaurantes y sistema de propinas.',
-        tech: ['React Native', 'Supabase', 'Express'],
-        type: 'mobile',
-        gradient: 'from-purple-400 to-pink-500',
-        features: ['Tracking GPS', 'Notificaciones push', 'Pagos móviles', 'Chat con repartidor'],
+        features: [
+          'Gestion de clientes',
+          'Membresías',
+          'Control de asistencia',
+          'Rutinas de entrenamiento',
+          'Asistencias',
+        ],
       },
       {
         title: 'Sistema de Gestión Empresarial',
@@ -71,34 +82,55 @@ const Portfolio = () => {
         tech: ['PHP con Laravel', 'MySQL', 'React'],
         type: 'web',
         gradient: 'from-green-400 to-cyan-500',
-        features: ['Dashboard analytics', 'Facturación automática', 'Gestión de inventario', 'Reportes PDF'],
+        features: [
+          'Dashboard analytics',
+          'Facturación automática',
+          'Gestión de inventario',
+          'Reportes PDF',
+        ],
       },
       {
-        title: 'API de Microservicios Fintech',
+        title: 'Facturador Electronico AFIP',
         description:
-          'Arquitectura de microservicios para fintech. Procesamiento de pagos, validación de identidad, scoring crediticio y auditoría.',
-        tech: ['Nest.js', 'PostgreSQL', 'Docker'],
-        type: 'api',
+          'Frontend y API para facturacion electronica AFIP: Procesamiento de facturas, validacion de identidad, scoring crediticio y auditoria.',
+        tech: ['Nest.js', 'PostgreSQL', 'TailwindCSS', 'Next.js'],
+        type: 'web y api',
         gradient: 'from-orange-400 to-red-500',
-        features: ['Microservicios', 'Autenticación JWT', 'Rate limiting', 'Logs de auditoría'],
+        features: [
+          'Facturador Electronico AFIP',
+          'Validacion de identidad',
+          'Scoring crediticio',
+          'Auditoria',
+        ],
       },
       {
         title: 'Plataforma de Cursos Online',
         description:
-          'LMS completo con video streaming, exámenes interactivos, certificados automáticos y sistema de progreso gamificado.',
-        tech: ['Next.js', 'MongoDB', 'TailwindCSS'],
-        type: 'web',
+          'Plataforma de cursos online: Video streaming, exámenes interactivos, certificados automáticos.',
+        tech: ['Next.js', 'Nest.js', 'TailwindCSS','PostgreSQL'],
+        type: 'web y api',
         gradient: 'from-indigo-400 to-purple-500',
-        features: ['Video streaming', 'Exámenes interactivos', 'Certificados PDF', 'Gamificación'],
+        features: [
+          'Video streaming',
+          'Exámenes interactivos',
+          'Certificados PDF',
+          'Gamificación',
+          'S3 (AWS)',
+        ],
       },
       {
-        title: 'App de Salud Mental',
+        title: 'Alerta P.L.A.',
         description:
-          'App móvil para seguimiento de bienestar mental. Diario de emociones, meditaciones guiadas, recordatorios y métricas de progreso.',
+          'App móvil para alertas de seguridad a la policia local de un municipio de Tucuman, Argentina.',
         tech: ['React Native', 'Supabase', 'Express'],
         type: 'mobile',
         gradient: 'from-pink-400 to-rose-500',
-        features: ['Diario de emociones', 'Meditaciones', 'Recordatorios', 'Métricas de progreso'],
+        features: [
+          'Diario de emociones',
+          'Meditaciones',
+          'Recordatorios',
+          'Métricas de progreso',
+        ],
       },
     ],
     []
@@ -334,13 +366,6 @@ const Portfolio = () => {
                               </span>
                             ))}
                           </div>
-
-                          <Button
-                            onClick={() => handleProjectClick('details')}
-                            className={`w-full bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white font-semibold py-2 rounded-lg transition-all duration-300`}
-                          >
-                            Ver Detalles
-                          </Button>
                         </motion.div>
                       );
                     })}
@@ -553,13 +578,6 @@ const Portfolio = () => {
                                 </span>
                               ))}
                             </div>
-
-                            <Button
-                              onClick={() => handleProjectClick('details')}
-                              className={`w-full bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white font-semibold py-2 rounded-lg transition-all duration-300`}
-                            >
-                              Ver Detalles
-                            </Button>
                           </motion.div>
                         );
                       })}
